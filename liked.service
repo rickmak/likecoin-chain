@@ -1,0 +1,11 @@
+[Unit]
+Description=Likecoin validator service
+
+[Service]
+User=likecoin
+WorkingDirectory=/home/likecoin
+ExecStart=/home/likecoin/liked --home /home/likecoin/.liked --get-ip start --rpc.laddr tcp://0.0.0.0:26657 --p2p.seeds 913bd0f4bea4ef512ffba39ab90eae84c1420862@34.82.131.35:26656
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
