@@ -6,6 +6,7 @@ User=fotan
 WorkingDirectory=/home/fotan
 ExecStart=/home/fotan/liked --home /home/fotan/.liked start --get-ip --rpc.laddr tcp://0.0.0.0:26657 --p2p.seeds c5e678f14219c1f161cb608aaeda37933d71695d@nnkken.dev:31801 --halt-time 0 --halt-height 0
 Restart=always
+RuntimeMaxSec=86400
 
 [Install]
 WantedBy=multi-user.target
